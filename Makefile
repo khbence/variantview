@@ -1,4 +1,4 @@
-
+.PHONY: debug utest
 
 debug:
 	cmake -E make_directory $(CURDIR)/debug
