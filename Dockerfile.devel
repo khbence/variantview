@@ -1,0 +1,10 @@
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+ENV SHELL=/bin/bash
+
+RUN apt update -y && apt upgrade -y && apt install -y build-essential git cmake gdb valgrind cmake-curses-gui libgtest-dev
+ENV CXX=/usr/bin/g++
+ENV CC=/usr/bin/gcc
+
+RUN useradd -m -u 1000 nonroot
