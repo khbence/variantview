@@ -5,5 +5,5 @@ debug:
 	cmake -S $(CURDIR) -B $(CURDIR)/debug -DCMAKE_BUILD_TYPE=Debug -DENABLE_TESTING=ON
 	cmake --build $(CURDIR)/debug --parallel
 
-utest: buildDebug
+utest: debug
 	./debug/test/testBin
